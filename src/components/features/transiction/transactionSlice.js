@@ -14,14 +14,14 @@ export const fetchTransactions = createAsyncThunk('transaction/fetchTransactions
     return transactions;
 })
 
-export const createTransactions = createAsyncThunk('transaction/createTransaction', async (data) => {
-    const transactions = await addTransictions(data);
-    return transactions;
+export const createTransaction = createAsyncThunk('transaction/createTransaction', async (data) => {
+    const transaction = await addTransictions(data);
+    return transaction;
 })
 
 export const changeTransactions = createAsyncThunk('transaction/changeTransaction', async ({ id, data }) => {
-    const transactions = await editTransactions({ id, data });
-    return transactions;
+    const transaction = await editTransactions({ id, data });
+    return transaction;
 })
 
 export const removeTransactions = createAsyncThunk('transaction/removeTransaction', async (id) => {
@@ -52,20 +52,19 @@ const transactionSlice = createSlice({
             })
 
             //createTransactions
-            .addCase(createTransactions.pending, (state, action) => {
+            .addCase(createTransaction.pending, (state) => {
                 state.isError = false;
-                state.isLoading = true
+                state.isLoading = true;
             })
-            .addCase(createTransactions.fulfilled, (state, action) => {
+            .addCase(createTransaction.fulfilled, (state, action) => {
                 state.isError = false;
                 state.isLoading = false;
                 state.transactions.push(action.payload);
             })
-            .addCase(createTransactions.rejected, (state, action) => {
-                state.isError = true;
+            .addCase(createTransaction.rejected, (state, action) => {
                 state.isLoading = false;
+                state.isError = true;
                 state.error = action.error ?.message;
-
             })
 
             //changeTransactions

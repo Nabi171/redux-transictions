@@ -1,16 +1,52 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "name": "Salary from Google",
-            "type": "income",
-            "amount": 1000000
-        },
-        {
-            "id": 2,
-            "name": "Family Expenses",
-            "type": "expense",
-            "amount": 200000
-        }
-    ]
+  "transactions": [
+    {
+      "id": 1,
+      "name": "Salary from Google",
+      "type": "income",
+      "amount": 1000000
+    },
+    {
+      "id": 2,
+      "name": "Family Expenses",
+      "type": "expense",
+      "amount": 200000
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "income",
+      "amount": "1",
+      "id": 3
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "expense",
+      "amount": 12,
+      "id": 4
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "income",
+      "amount": 1,
+      "id": 5
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "income",
+      "amount": 12,
+      "id": 6
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "income",
+      "amount": 12,
+      "id": 7
+    },
+    {
+      "name": "JANNATUL MAOWA ANISA",
+      "type": "expense",
+      "amount": 12,
+      "id": 8
+    }
+  ]
 }
