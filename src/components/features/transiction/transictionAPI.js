@@ -1,7 +1,7 @@
 import axios from "../../../utils/axios";
 
 export const getTransictions = async () => {
-    const response = await axios.get('/transictions');
+    const response = await axios.get('/transactions');
     return response.data;
 }
 
@@ -11,6 +11,7 @@ export const addTransictions = async (data) => {
 };
 
 export const editTransactions = async (id, data) => {
+    // const response = await axios.put(`/transactions/${id}`, data);
     const response = await axios.put(`/transactions/${id}`, data);
     return response.data;
 }
